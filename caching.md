@@ -4,11 +4,13 @@ Caching in .NET Core Web API can significantly improve the performance of your a
 Types of Caching in .NET Core
 
 ### 1. In-Memory Caching:
-        Stores data in the server's memory, which is fast but limited to the server's memory capacity and lost when the application restarts.
+Stores data in the server's memory, which is fast but limited to the server's memory capacity and lost when the application restarts.
+
 ### 2. Distributed Caching:
-        Uses an external cache like Redis or SQL Server to store data across multiple servers, enhancing scalability and persistence.
+Uses an external cache like Redis or SQL Server to store data across multiple servers, enhancing scalability and persistence.
+
 ### 3. Response Caching:
-        Caches HTTP responses at the server or client level to speed up subsequent requests.    
+Caches HTTP responses at the server or client level to speed up subsequent requests.    
 
 ## 1. Implementing In-Memory Caching
 
