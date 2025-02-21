@@ -6,7 +6,7 @@ In ASP.NET Core, IHostedService and BackgroundService are used for running backg
 ## 1. IHostedService
 IHostedService is a general interface that allows you to manage the start and stop lifecycle of a background task. It requires you to implement StartAsync and StopAsync.
 
-``
+`
 public class MyHostedService : IHostedService
 {
     private Timer _timer;
@@ -30,5 +30,5 @@ public class MyHostedService : IHostedService
         return Task.CompletedTask;
     }
 }
-``
+`
 
