@@ -64,6 +64,14 @@ public class MyBackgroundService : BackgroundService
 builder.Services.AddHostedService<MyBackgroundService>();
 ```
 
+| Feature                 | IHostedService            | BackgroundService                      |
+|-------------------------|--------------------------|----------------------------------------|
+| Implementation         | Requires StartAsync and StopAsync | Uses ExecuteAsync method             |
+| Ease of Use            | Requires manual task handling | Provides built-in support for long-running tasks |
+| Suitable For           | Short-lived background tasks | Continuous background processing      |
+| Manual Task Management | Yes                      | No, built-in support                  |
+
+
 ### Key Differences
 
 ### When to Use What?
