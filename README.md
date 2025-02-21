@@ -31,5 +31,47 @@ public class MyHostedService : IHostedService
     }
 }
 ```
+## Register it in Program.cs
 
+```
+builder.Services.AddHostedService<MyHostedService>();
+```
+
+## 2. BackgroundService
+BackgroundService is an abstract class that implements IHostedService but provides an easier way to run long-running background tasks using an ExecuteAsync method.
+
+### Example using BackgroundService
+    
+```
+public class MyBackgroundService : BackgroundService
+{
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        Console.WriteLine("MyBackgroundService is starting...");
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            Console.WriteLine($"Task running at: {DateTime.Now}");
+            await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
+        }
+    }
+}
+
+```
+
+### Register it in Program.cs
+
+```
+builder.Services.AddHostedService<MyBackgroundService>();
+```
+
+### Key Differences
+
+### When to Use What?
+- Use IHostedService when:
+    You need lifecycle events (StartAsync, StopAsync).
+    You want to control when the task starts and stops.
+- Use BackgroundService when:
+    You need continuous or periodic background execution.
+    You want a cleaner implementation without handling manual tasks.
+    Would you like me to tailor an example for a specific use case, such as processing messages from a queue or scheduled tasks? 🚀
 
