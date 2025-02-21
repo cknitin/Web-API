@@ -68,10 +68,10 @@ builder.Services.AddHostedService<MyBackgroundService>();
 
 ### When to Use What?
 - Use IHostedService when:
-    You need lifecycle events (StartAsync, StopAsync).
-    You want to control when the task starts and stops.
+    - You need lifecycle events (StartAsync, StopAsync).
+    - You want to control when the task starts and stops.
 - Use BackgroundService when:
-    You need continuous or periodic background execution.
-    You want a cleaner implementation without handling manual tasks.
-    Would you like me to tailor an example for a specific use case, such as processing messages from a queue or scheduled tasks? 🚀
+    - You need continuous or periodic background execution.
+    - You want a cleaner implementation without handling manual tasks.
+    - Would you like me to tailor an example for a specific use case, such as processing messages from a queue or scheduled tasks? 🚀
 
