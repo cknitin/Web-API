@@ -23,23 +23,39 @@ There are several widely adopted strategies for API versioning. Each has its pro
 3. Query String Versioning
 
     Description: The version is passed as a query parameter (e.g., /api/users?api-version=1.0).
-    Pros: Clean URLs, flexible for optional versioning.
-    Cons: Less discoverable, might conflict with other query parameters.
-    Example: GET /api/users?api-version=1.0.
+    - Pros:
+        - Clean URLs, flexible for optional versioning.
+    - Cons:
+         - Less discoverable, might conflict with other query parameters.
+    
+    Example: 
+    ```
+    GET /api/users?api-version=1.0.
+    ```
 
-4. Header Versioning
+5. Header Versioning
 
     Description: The version is specified in a custom HTTP header (e.g., Api-Version: 1.0).
-    Pros: Keeps URLs clean, aligns with REST principles.
-    Cons: Less visible to clients, requires client-side support for headers.
-    Example: GET /api/users with header Api-Version: 1.0.
+    - Pros:
+        - Keeps URLs clean, aligns with REST principles.
+    - Cons:
+        - Less visible to clients, requires client-side support for headers.
+    
+    ```
+        Example: GET /api/users with header Api-Version: 1.0.
+    ```
 
-5. Media Type Versioning (Content Negotiation)
+6. Media Type Versioning (Content Negotiation)
 
     Description: The version is embedded in the Accept header’s media type (e.g., Accept: application/vnd.myapp.v1+json).
-    Pros: RESTful, leverages HTTP standards, supports content negotiation.
-    Cons: Complex for clients to implement, less intuitive.
-    Example: GET /api/users with Accept: application/vnd.myapp.v1+json.
+    - Pros:
+        - RESTful, leverages HTTP standards, supports content negotiation.
+     - Cons:
+         - Complex for clients to implement, less intuitive.
+    
+   ``` 
+       Example: GET /api/users with Accept: application/vnd.myapp.v1+json.
+   ```
 
 ## Step 1: Install the Package
 
