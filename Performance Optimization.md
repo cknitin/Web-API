@@ -1,3 +1,5 @@
+# Performance optimization
+
 Here's a detailed explanation and implementation of **Performance Optimization** techniques for a .NET Core Web API, focusing on the latest versions (e.g., .NET 6, 7, or 8 as of February 27, 2025). Optimizing performance is crucial for ensuring your API responds quickly, scales efficiently, and uses resources effectively.
 
 ---
